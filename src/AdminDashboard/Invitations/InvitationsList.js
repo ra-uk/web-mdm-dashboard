@@ -62,6 +62,13 @@ export default class InvitationsList extends Component {
     }
 
     handleRefresh = () => {
+        this.props.glpi.searchItems('PluginFlyvemdmInvitation', null, null, {uid_cols: true, 'forcedisplay[0]': 1, 'forcedisplay[1]': 2, 'forcedisplay[3]': 3, })
+        .then((response) => {
+            console.log(response)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
         this.props.fetchData(this.props.location[0])
     }
 
@@ -255,5 +262,6 @@ InvitationsList.propTypes = {
     changeSelectionMode: PropTypes.func.isRequired,
     actionList: PropTypes.string,
     changeActionList: PropTypes.func.isRequired,
-    showNotification: PropTypes.func.isRequired
+    showNotification: PropTypes.func.isRequired,
+    glpi: PropTypes.object.isRequired
 }
