@@ -2,6 +2,7 @@
   "name": "web-admin-dashboard",
   "version": "0.1.0",
   "dependencies": {
+    "@teclib/glpi-api-client": "https://github.com/flyve-mdm/javascript-library-glpi#develop",
     "autoprefixer": "7.2.5",
     "babel-core": "6.26.0",
     "babel-eslint": "8.2.0",
